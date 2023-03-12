@@ -1,0 +1,13 @@
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET / HTTP/1.1" 200 80745
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /style.css HTTP/1.1" 200 3041
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /images/header.png HTTP/1.1" 200 7766
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /index.php?=PHPE9568F35-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 2146
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /index.php?=PHPE9568F34-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 2524
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /images/background.jpg HTTP/1.1" 200 12386
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /images/menuleft.jpg HTTP/1.1" 200 11236
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /images/menuright.jpg HTTP/1.1" 200 11239
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /images/menu.jpg HTTP/1.1" 200 11219
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /images/topcontent.jpg HTTP/1.1" 200 11578
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /images/content.jpg HTTP/1.1" 200 11916
+::1 - - [12/Mar/2023:12:13:35 +0200] "GET /images/banner.jpg HTTP/1.1" 200 38149
+::1 - - [12/Mar/2023:12:13:54 +0200] "GET /generateWords.php HTTP/1.1" 200 2160
