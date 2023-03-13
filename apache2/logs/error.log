@@ -1,5 +1,5 @@
-[Mon Mar 13 15:38:22.339879 2023] [mpm_winnt:notice] [pid 5084:tid 780] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Mon Mar 13 15:38:22.339879 2023] [mpm_winnt:notice] [pid 5084:tid 780] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Mon Mar 13 15:38:22.339879 2023] [core:notice] [pid 5084:tid 780] AH00094: Command line: 'C:\\Users\\istsc\\Desktop\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/istsc/Desktop/Jaunvardotajs/apache2'
-[Mon Mar 13 15:38:22.346880 2023] [mpm_winnt:notice] [pid 5084:tid 780] AH00418: Parent: Created child process 16484
-[Mon Mar 13 15:38:23.324369 2023] [mpm_winnt:notice] [pid 16484:tid 832] AH00354: Child: Starting 64 worker threads.
+[Mon Mar 13 18:38:57.710391 2023] [mpm_winnt:notice] [pid 11100:tid 780] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Mon Mar 13 18:38:57.710391 2023] [mpm_winnt:notice] [pid 11100:tid 780] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Mon Mar 13 18:38:57.710391 2023] [core:notice] [pid 11100:tid 780] AH00094: Command line: 'C:\\Users\\37129\\Documents\\GitHub\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/37129/Documents/GitHub/Jaunvardotajs/apache2'
+[Mon Mar 13 18:38:57.726003 2023] [mpm_winnt:notice] [pid 11100:tid 780] AH00418: Parent: Created child process 12756
+[Mon Mar 13 18:38:58.054164 2023] [mpm_winnt:notice] [pid 12756:tid 796] AH00354: Child: Starting 64 worker threads.
