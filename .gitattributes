@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# force binary encoding (so that github doesn't change CRLF to LF)
+* -text
