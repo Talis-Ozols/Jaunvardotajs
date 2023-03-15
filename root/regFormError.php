@@ -30,8 +30,19 @@ Parole<br>
 </form>
 </div>
 
-<span style="font-weight: bold;">Ievadītā E-pasta adrese jau ir
-reģistrēta!</span><br>
+<?php
+if(isset($_GET['error'])){
+  if($_GET['error'] == "nepietiekama_informacija"){
+    echo '<span style="font-weight: bold;">Ievadītā informācija nav pietiekama!</span><br>';
+  }
+  elseif($_GET['error'] == "adrese_jau_registreta"){
+    echo '<span style="font-weight: bold;">Ievadītā E-pasta adrese jau ir reģistrēta!</span><br>';
+  }
+  else {
+    echo '<span style="font-weight: bold;">Gadījās nezināma kļūme!</span><br>';
+  }
+}
+?>
 
 <br>
 
