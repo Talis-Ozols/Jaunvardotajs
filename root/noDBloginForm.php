@@ -46,12 +46,12 @@
 			}
 			else
 			{
-				header("Location: loginFormError.html");
+				header("Location: loginForm.php?error=nepareizi_dati");
 			}
 		}
-		else
+		else // Ievadītā epasta adrese nav reģistrēta
 		{
-			header("Location: loginFormError.html");
+			header("Location: loginForm.php?error=nepareizi_dati");
 		}
 
 		$stmt->close();

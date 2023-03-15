@@ -4,7 +4,7 @@
 	session_start();
 	if (!isset($_SESSION['loggedin']))
 	{
-		header("Location: loginForm.html");
+		header("Location: loginForm.php");
 		exit;
 	}
 	session_destroy();
@@ -19,10 +19,10 @@
 <br><br><br>
 Parole nomainīta veiksmīgi!
 <br>
-Jūs tikāt izrakstīs
+Jūs tikāt izrakstīts
 <br><br>
 <?php
 	echo nl2br("\n");
-	echo '<a id="spiedSeit" href="loginForm.html">Atgriezties</a><br>';
+	echo '<a id="spiedSeit" href="loginForm.php">Atgriezties</a><br>';
 ?>
 </body></html>

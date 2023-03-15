@@ -42,7 +42,7 @@
 				// Šis epasts jau ir reģistrēts
 				if ($stmt->num_rows > 0)
 				{
-					header("Location: regFormError.php?error=adrese_jau_registreta");
+					header("Location: regForm.php?error=adrese_jau_registreta");
 					exit;
 				}
 			}
@@ -61,10 +61,10 @@
       $tabula="lietotaji";
       $sql="INSERT INTO $tabula (lietotajvards, epastaAdrese, sifretaParole) values ( '".mysql_real_escape_string($_POST['lietotajvards'], $link)."', '".mysql_real_escape_string($_POST['epastaAdrese'], $link)."', '".mysql_real_escape_string($safePass, $link)."' )";
       mysql_query($sql, $link);
-			header("Location: loginForm.html");
+			header("Location: loginForm.php");
     }
 		else // Nepilnīga informācija
 		{
-			header("Location: regFormError.php?error=nepietiekama_informacija");
+			header("Location: regForm.php?error=nepietiekama_informacija");
 		}
 ?>

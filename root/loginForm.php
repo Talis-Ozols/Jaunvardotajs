@@ -2,7 +2,7 @@
 <html><head>
   
   <meta content="text/html; charset=utf8" http-equiv="content-type">
-  <title>loginFormError</title>
+  <title>loginForm</title>
 
   
   <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="style.css">
@@ -29,11 +29,15 @@ Parole<br>
   <br>
   <input value="Pierakstīties" type="submit"></form>
 
-<span style="font-weight: bold;">Nepareiza E-pasta adrese vai parole!</span><br>
+<?php if (isset($_GET['error']) && $_GET['error'] == "nepareizi_dati"): ?>
+  <span style="font-weight: bold;">Nepareiza E-pasta adrese vai parole!</span>
+<?php endif; ?>
 
 <br>
 
-Vēl nav konta? <a id="spiedSeit" href="regForm.html">Spied šeit</a><br>
+<br>
+
+Vēl nav konta? <a id="spiedSeit" href="regForm.php">Spied šeit</a><br>
 
 <br>
 </body></html>

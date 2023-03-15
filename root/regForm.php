@@ -6,7 +6,7 @@
 
   
   <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="style.css">
-
+  
 </head><body>
 <div style="text-align: center;"><br>
 <br>
@@ -30,11 +30,25 @@ Parole<br>
 </form>
 </div>
 
-<br>
+<?php
+if(isset($_GET['error'])){
+  if($_GET['error'] == "nepietiekama_informacija"){
+    echo '<span style="font-weight: bold;">Ievadītā informācija nav pietiekama!</span>';
+  }
+  elseif($_GET['error'] == "adrese_jau_registreta"){
+    echo '<span style="font-weight: bold;">Ievadītā E-pasta adrese jau ir reģistrēta!</span>';
+  }
+  else {
+    echo '<span style="font-weight: bold;">Gadījās nezināma kļūme!</span>';
+  }
+}
+?>
 
 <br>
 
-Jau ir konts? <a id="spiedSeit" href="loginForm.html">Spied šeit</a><br>
+<br>
+
+Jau ir konts? <a id="spiedSeit" href="loginForm.php">Spied šeit</a><br>
 
 <br>
 

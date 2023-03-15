@@ -16,5 +16,5 @@ Notika kļūda!
 <br>
 Jūs tikāt izrakstīts
 <br><br>
-<a id="spiedSeit" href="loginForm.html">Atgriezties</a><br>
+<a id="spiedSeit" href="loginForm.php">Atgriezties</a><br>
 </body></html>
