@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=utf8" http-equiv="content-type">
+  <title>regFormError</title>
+
+  
+  
+  <style type="text/css">
+body {
+  border-style: none;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Times New Roman",Times,serif;
+  line-height: 30px;
+  background-color: #9d2235;
+  color: white;
+}
+#spiedSeit {
+  color: white;
+  line-height: 30px;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 30px;
+}
+h1 {
+  border-style: none;
+  font-size: 60px;
+  color: white;
+  background-color: #9d2235;
+  font-family: "Times New Roman",Times,serif;
+  text-align: center;
+  line-height: 30px;
+}
+
+  </style>
+</head><body>
+<div style="text-align: center;"><br>
+<br>
+<br>
+<h1>Reģistrācija</h1>
+<br>
+<br>
+</div>
+
+<div style="text-align: center;">
+<form action="uzDBregForm.php" method="post" name="regForm">Lietotājvārds<br>
+  <input size="40" maxlength="50" name="lietotajvards"><br>
+  <br>
+E-pasta adrese<br>
+  <input size="40" maxlength="255" name="epastaAdrese"><br>
+  <br>
+Parole<br>
+  <input size="40" maxlength="64" name="sifretaParole" type="password"><br>
+  <br>
+  <input value="Reģistrēties" type="submit"><br>
+</form>
+</div>
+
+<span style="font-weight: bold;">Ievadītā E-pasta adrese jau ir
+reģistrēta!</span><br>
+
+<br>
+
+Jau ir konts? <a id="spiedSeit" href="loginForm.html">Spied šeit</a><br>
+
+<br>
+
+</body></html>

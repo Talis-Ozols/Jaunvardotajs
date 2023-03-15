@@ -2,11 +2,7 @@
 
 <?php
 	session_start();
-	if (!isset($_SESSION['loggedin']))
-	{
-		header("Location: loginForm.html");
-		exit;
-	}
+	session_destroy();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -37,13 +33,10 @@ h1 {
 }
 
 </style></head><body>
-<?php
-	echo "<div style='text-align:right'>";
-	echo 'Sveicināti, ' . $_SESSION['name'] . '!';
-	echo nl2br("\n");
-	echo '<a id="spiedSeit" href="profils.php">Profils</a><br>';
-	echo "<div style='text-align:center'>";
-	echo "Šeit būs vārdi etc";
-?>
-
+<br><br><br>
+Notika kļūda!
+<br>
+Jūs tikāt izrakstīts
+<br><br>
+<a id="spiedSeit" href="loginForm.html">Atgriezties</a><br>
 </body></html>
