@@ -21,7 +21,20 @@
 	echo nl2br("\n");
 	echo '<a id="spiedSeit" href="profils.php">Profils</a><br>';
 	echo "<div style='text-align:center'>";
-	echo "Šeit būs vārdi etc";
+	// echo "Šeit būs vārdi etc";
+	
+	include 'generator/generateWords.php';
+	
+	// var_dump($word_array);
+	
+	echo "<table style='margin-left: auto; margin-right: auto; font-size:20px'>";
+	echo "<tr> <th>npk</th> <th>jaunvārds</th> </tr>";
+	foreach ($word_array as $i => $word) {
+		echo "<tr> <td>$i</td> <td>$word</td> </tr>";
+	}
+	echo "</table>";
+	
+	echo "</div>";
 ?>
 
 </body></html>
