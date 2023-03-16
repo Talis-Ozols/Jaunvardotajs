@@ -22,10 +22,10 @@
 
 <form action="noDBloginForm.php" method="post" name="loginForm">
 E-pasta adrese<br>
-  <input size="40" maxlength="255" name="epastaAdrese"><br>
+  <input size="40" maxlength="255" name="epastaAdrese" required><br>
   <br>
 Parole<br>
-  <input size="40" maxlength="64" name="sifretaParole" type="password"><br>
+  <input minlength="8" size="40" maxlength="64" name="sifretaParole" type="password" required><br>
   <br>
   <input value="Pierakstīties" type="submit"></form>
 

@@ -27,7 +27,7 @@
 
 <form method="post" action="changePassAction.php" name="changePassForm">Ievadiet
 jauno paroli<br>
-  <input maxlength="64" size="40" name="sifretaParole" type="password"><br>
+  <input minlength="8" maxlength="64" size="40" name="sifretaParole" type="password" required><br>
   <br>
   <input value="Aptiprin&#257;t" type="submit"><br>
 </form>

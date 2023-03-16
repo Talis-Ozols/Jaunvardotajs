@@ -22,7 +22,7 @@
 <br>
 <br>
 <form method="post" action="changeNameAction.php" name="changeNameForm">Ievadiet jauno lietot&#257;jv&#257;rdu<br>
-  <input maxlength="50" size="40" name="lietotajvards"><br>
+  <input maxlength="50" size="40" name="lietotajvards" required><br>
   <br>
   <input value="Aptiprin&#257;t" type="submit"><br>
 </form>
