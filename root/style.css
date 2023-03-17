@@ -1,0 +1,35 @@
+body {
+  border-style: none;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Times New Roman",Times,serif;
+  line-height: 30px;
+  background-color: #9d2235;
+  color: white;
+}
+h1 {
+  border-style: none;
+  font-size: 60px;
+  color: white;
+  /* background-color: #9d2235; */
+  font-family: "Times New Roman",Times,serif;
+  text-align: center;
+  line-height: 30px;
+}
+h2 {
+  border-style: none;
+  font-size: 45px;
+  color: white;
+  font-family: "Times New Roman",Times,serif;
+  text-align: center;
+  line-height: 30px;
+}
+#spiedSeit {
+  line-height: 30px;
+  font-size: 30px;
+  color: white;
+  font-family: "Times New Roman",Times,serif;
+}
+th {
+  text-align: left;
+}
