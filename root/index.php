@@ -43,7 +43,7 @@
 	if ($result->num_rows > 0)
 	{
 		echo "<table style='margin-left: auto; margin-right: auto; font-size:30px'>";
-		echo "<tr> <th><a id='spiedSeit' href='addWord.php'>Jaunvārds</a></th> <th><a id='spiedSeit' href='addDef.php'>Definīcija</a></th> <th>Lietotājs</th> </tr>";
+		echo "<tr> <th><a id='spiedSeit' href='addWord.php'>Jaunvārds</a></th> <th><a id='spiedSeit' href='addDef.php'>Definīcija</a></th> <th>Lietotājs (vārda radītājs, definīcjas radītājs)</th> </tr>";
 		while($row = $result->fetch_assoc())
 		{
 			$sql3 = "SELECT vardaID FROM vardi WHERE vards = '" . $row["vards"] . "' limit 1";		
@@ -51,22 +51,22 @@
 			$row3 = $result3->fetch_assoc();
 #			echo $row3["vardaID"];
 			
-			$sql2 = "SELECT definicija FROM definicijas WHERE vardaID = " . $row3["vardaID"];
+			$sql2 = "SELECT definicija, lietotajaID FROM definicijas WHERE vardaID = " . $row3["vardaID"];
 			$result2 = $con->query($sql2);
 			while($row2 = $result2->fetch_assoc())
 			{
 #				echo $row2["definicija"];
-				echo "<tr> <td style='width:200px'>" . $row["vards"] . "</td> <td style='width:310px'>" . $row2["definicija"] . "</td> <td style='width:200px'>";
+				echo "<tr> <td style='width:400px'>" . $row["vards"] . "</td> <td style='width:700px'>" . $row2["definicija"] . "</td> <td style='width:570px'>";
 			
 				$sql1 = "SELECT lietotajvards FROM lietotaji WHERE lietotajaID = " . $row["lietotajaID"] . " limit 1";
-#				$sql1->execute();
-#				$result1 = $sql1->get_result();
-#				$value1 = $result1->fetch_object();
-#				$row1 = $value1->lietotajvards;
-			
 				$result1 = $con->query($sql1);
 				$row1 = $result1->fetch_assoc();
-				echo $row1["lietotajvards"] . "</td> </tr>";
+				
+				$sql4 = "SELECT lietotajvards FROM lietotaji WHERE lietotajaID = " . $row2["lietotajaID"] . " limit 1";
+				$result4 = $con->query($sql4);
+				$row4 = $result4->fetch_assoc();
+				
+				echo $row1["lietotajvards"] . ", " . $row4["lietotajvards"] . "</td> </tr>";
 			}
 		}
 		echo "</table>";	
