@@ -9,9 +9,10 @@
   
 </head><body>
 <div style="text-align: center;"><br>
+<h1>Jaunvārdotājs</h1>
 <br>
 <br>
-<h1>Reģistrācija</h1>
+<h2>Reģistrācija</h2>
 <br>
 <br>
 </div>

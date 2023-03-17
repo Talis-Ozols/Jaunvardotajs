@@ -1,5 +1,7 @@
-[Mon Mar 13 18:38:57.710391 2023] [mpm_winnt:notice] [pid 11100:tid 780] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Mon Mar 13 18:38:57.710391 2023] [mpm_winnt:notice] [pid 11100:tid 780] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Mon Mar 13 18:38:57.710391 2023] [core:notice] [pid 11100:tid 780] AH00094: Command line: 'C:\\Users\\37129\\Documents\\GitHub\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/37129/Documents/GitHub/Jaunvardotajs/apache2'
-[Mon Mar 13 18:38:57.726003 2023] [mpm_winnt:notice] [pid 11100:tid 780] AH00418: Parent: Created child process 12756
-[Mon Mar 13 18:38:58.054164 2023] [mpm_winnt:notice] [pid 12756:tid 796] AH00354: Child: Starting 64 worker threads.
+[Fri Mar 17 14:23:55.181391 2023] [mpm_winnt:notice] [pid 7900:tid 780] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Fri Mar 17 14:23:55.181391 2023] [mpm_winnt:notice] [pid 7900:tid 780] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Fri Mar 17 14:23:55.181391 2023] [core:notice] [pid 7900:tid 780] AH00094: Command line: 'C:\\Users\\istsc\\Desktop\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/istsc/Desktop/Jaunvardotajs/apache2'
+[Fri Mar 17 14:23:55.189393 2023] [mpm_winnt:notice] [pid 7900:tid 780] AH00418: Parent: Created child process 12900
+[Fri Mar 17 14:23:56.719016 2023] [mpm_winnt:notice] [pid 12900:tid 892] AH00354: Child: Starting 64 worker threads.
+[Fri Mar 17 14:24:23.820819 2023] [:error] [pid 12900:tid 1300] [client ::1:62055] script 'C:/Users/istsc/Desktop/Jaunvardotajs/root/index.php' not found or unable to stat, referer: http://localhost:8080/loginForm.php
+[Fri Mar 17 14:24:54.331966 2023] [:error] [pid 12900:tid 1300] [client ::1:62101] script 'C:/Users/istsc/Desktop/Jaunvardotajs/root/index.php' not found or unable to stat

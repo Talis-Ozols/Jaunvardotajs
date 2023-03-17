@@ -9,12 +9,12 @@
   
 </head><body>
 <br>
-
+<h1>Jaunvārdotājs</h1>
 <br>
 
 <br>
 
-<h1>Pierakstīties</h1>
+<h2>Pierakstīties</h2>
 
 <br>
 
