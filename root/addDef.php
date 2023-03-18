@@ -28,8 +28,15 @@
 
 
 </head><body>
-<form action="addDefAction.php" method="post" name="wordEditForm">Ierakstiet v&#257;rdu<span style="font-weight: bold;"><br>
-  <input maxlength="50" size="40" name="vards" required><br>
+	<?php if (isset($_GET['generetais_vards'])):
+		echo "<p>Vārds ".$_GET['generetais_vards']." veiksmīgi pievienots datubāzei! Varat tam uzreiz pievienot definīciju.</p><br>\n";
+	endif; ?>
+	<form action="addDefAction.php" method="post" name="wordEditForm">Ierakstiet v&#257;rdu<span style="font-weight: bold;"><br>
+  <input maxlength="50" size="40" name="vards"
+	<?php if (isset($_GET['generetais_vards'])):
+  	echo "value=".$_GET['generetais_vards'];
+  endif; ?>
+	required><br>
   <br>
   </span>Ierakstiet savu defin&#299;ciju<br>
   <textarea name="definicija" rows="5" cols="40" required></textarea><br>

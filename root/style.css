@@ -33,3 +33,14 @@ h2 {
 th {
   text-align: left;
 }
+
+/* unstyled_submit_button klasi var piešķirt input elementam ar submit tipu, lai tas parādītos kā teksts, nevis poga. Pēc tam tiek atgrieztas dažas no atceltajām īpašībām. */
+.unstyled_submit_button {
+  all: unset;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.unstyled_submit_button:focus {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}

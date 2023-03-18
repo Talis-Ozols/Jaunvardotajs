@@ -19,9 +19,22 @@
 		exit('Kļūda cenšoties pieslēgties MySQL: ' . mysqli_connect_error());
 	}
 	
-	header("Location: addWord.php?error=neeksiste");
-/*	
-	$sql = "SELECT vardaID FROM vardi WHERE vards = '" . $_POST['vards'] . "' limit 1";		
+	var_dump($_GET['pievienojamais_vards']);
+	
+	$sql = "INSERT INTO vardi (`vards`, `generesanasLaiks`, `generatoraIevaddati`, `lietotajaID`, `generatoraID`) VALUES ('".$_GET['pievienojamais_vards']."', NOW(), '', ".$_SESSION['id'].", 1)";
+	if (mysqli_query($con, $sql)) {
+	  echo "New record created successfully";
+	} else {
+	  echo "Error: " . $sql . "<br>" . mysqli_error($con);
+	}
+	
+	// include 'generator/generateWords.php';
+	
+	// var_dump($word_array);
+	
+	header("Location: addDef.php?generetais_vards=".urlencode($_GET['pievienojamais_vards']));
+/*
+	$sql = "SELECT vardaID FROM vardi WHERE vards = '" . $_POST['vards'] . "' limit 1";
 	$result = $con->query($sql);
 	if ($result->num_rows > 0)
 	{

@@ -1,7 +1,9 @@
-[Fri Mar 17 14:23:55.181391 2023] [mpm_winnt:notice] [pid 7900:tid 780] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Fri Mar 17 14:23:55.181391 2023] [mpm_winnt:notice] [pid 7900:tid 780] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Fri Mar 17 14:23:55.181391 2023] [core:notice] [pid 7900:tid 780] AH00094: Command line: 'C:\\Users\\istsc\\Desktop\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/istsc/Desktop/Jaunvardotajs/apache2'
-[Fri Mar 17 14:23:55.189393 2023] [mpm_winnt:notice] [pid 7900:tid 780] AH00418: Parent: Created child process 12900
-[Fri Mar 17 14:23:56.719016 2023] [mpm_winnt:notice] [pid 12900:tid 892] AH00354: Child: Starting 64 worker threads.
-[Fri Mar 17 14:24:23.820819 2023] [:error] [pid 12900:tid 1300] [client ::1:62055] script 'C:/Users/istsc/Desktop/Jaunvardotajs/root/index.php' not found or unable to stat, referer: http://localhost:8080/loginForm.php
-[Fri Mar 17 14:24:54.331966 2023] [:error] [pid 12900:tid 1300] [client ::1:62101] script 'C:/Users/istsc/Desktop/Jaunvardotajs/root/index.php' not found or unable to stat
+[Sat Mar 18 16:33:51.258119 2023] [mpm_winnt:notice] [pid 13060:tid 788] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Sat Mar 18 16:33:51.259119 2023] [mpm_winnt:notice] [pid 13060:tid 788] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Sat Mar 18 16:33:51.259119 2023] [core:notice] [pid 13060:tid 788] AH00094: Command line: 'C:\\Users\\istsc\\Desktop\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/istsc/Desktop/Jaunvardotajs/apache2'
+[Sat Mar 18 16:33:51.266120 2023] [mpm_winnt:notice] [pid 13060:tid 788] AH00418: Parent: Created child process 4504
+[Sat Mar 18 16:33:52.122180 2023] [mpm_winnt:notice] [pid 4504:tid 788] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 18 17:08:10.655924 2023] [:error] [pid 4504:tid 1304] [client ::1:62692] PHP Notice:  Undefined variable: conn in C:\\Users\\istsc\\Desktop\\Jaunvardotajs\\root\\addWordAction.php on line 28, referer: http://localhost:8080/addWord.php?virknes_garums=2
+[Sat Mar 18 17:08:10.656924 2023] [:error] [pid 4504:tid 1304] [client ::1:62692] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in C:\\Users\\istsc\\Desktop\\Jaunvardotajs\\root\\addWordAction.php on line 28, referer: http://localhost:8080/addWord.php?virknes_garums=2
+[Sat Mar 18 18:02:09.099773 2023] [:error] [pid 4504:tid 1276] [client ::1:61795] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\\Users\\istsc\\Desktop\\Jaunvardotajs\\root\\addWord.php on line 51, referer: http://localhost:8080/
+[Sat Mar 18 18:22:55.299572 2023] [:error] [pid 4504:tid 1276] [client ::1:51834] PHP Parse error:  syntax error, unexpected 'isset' (T_ISSET) in C:\\Users\\istsc\\Desktop\\Jaunvardotajs\\root\\addWord.php on line 32, referer: http://localhost:8080/index.php
