@@ -16,14 +16,19 @@
 
 </head><body>
 <script type="text/javascript">
-	function upvotePressed(upvoteBtnID, downvoteBtnID) {
-		upvoteBtns = document.getElementsByClassName(upvoteBtnID);
-		downvoteBtns = document.getElementsByClassName(downvoteBtnID);
+	function upvotePressed(wordID) {
+		upvoteBtns = document.getElementsByClassName("upvote_btn_"+wordID);
+		downvoteBtns = document.getElementsByClassName("downvote_btn_"+wordID);
+		upvoteCounts = document.getElementsByClassName("upvote_count_"+wordID);
+		downvoteCounts = document.getElementsByClassName("downvote_count_"+wordID);
 		// console.log(upvoteBtns[0]);
 		if (upvoteBtns[0].classList.contains("pressed_vote")) { // Unpress the upvote buttons
 			for (var btn of upvoteBtns) {
 				btn.classList.remove("pressed_vote");
 				btn.classList.add("unpressed_vote");
+			}
+			for (var div of upvoteCounts) {
+				div.innerHTML--;
 			}
 		}
 		else { // Press the upvote buttons
@@ -32,21 +37,32 @@
 				btn.classList.remove("unpressed_vote");
 				btn.classList.add("pressed_vote");
 			}
+			for (var div of upvoteCounts) {
+				div.innerHTML++;
+			}
 			if (downvoteBtns[0].classList.contains("pressed_vote")) { // Also unpress the downvote buttons
 				for (var btn of downvoteBtns) {
 					btn.classList.remove("pressed_vote");
 					btn.classList.add("unpressed_vote");
 				}
+				for (var div of downvoteCounts) {
+					div.innerHTML--;
+				}
 			}
 		}
 	}
-	function downvotePressed(upvoteBtnID, downvoteBtnID) {
-		upvoteBtns = document.getElementsByClassName(upvoteBtnID);
-		downvoteBtns = document.getElementsByClassName(downvoteBtnID);
+	function downvotePressed(wordID) {
+		upvoteBtns = document.getElementsByClassName("upvote_btn_"+wordID);
+		downvoteBtns = document.getElementsByClassName("downvote_btn_"+wordID);
+		upvoteCounts = document.getElementsByClassName("upvote_count_"+wordID);
+		downvoteCounts = document.getElementsByClassName("downvote_count_"+wordID);
 		if (downvoteBtns[0].classList.contains("pressed_vote")) { // Unpress the downvote buttons
 			for (var btn of downvoteBtns) {
 				btn.classList.remove("pressed_vote");
 				btn.classList.add("unpressed_vote");
+			}
+			for (var div of downvoteCounts) {
+				div.innerHTML--;
 			}
 		}
 		else { // Press the downvote buttons
@@ -54,10 +70,16 @@
 				btn.classList.remove("unpressed_vote");
 				btn.classList.add("pressed_vote");
 			}
+			for (var div of downvoteCounts) {
+				div.innerHTML++;
+			}
 			if (upvoteBtns[0].classList.contains("pressed_vote")) { // Also unpress the upvote buttons
 				for (var btn of upvoteBtns) {
 					btn.classList.remove("pressed_vote");
 					btn.classList.add("unpressed_vote");
+				}
+				for (var div of upvoteCounts) {
+					div.innerHTML--;
 				}
 			}
 		}
@@ -104,20 +126,44 @@
 			$result2 = $con->query($sql2);
 			while($row2 = $result2->fetch_assoc())
 			{
+				// Find whether the current user upvoted or downvoted the current word
+				$word_vote_sql = "SELECT vertiba FROM varduBalsis WHERE lietotajaID=".$_SESSION['id']." AND vardaID=".$row3["vardaID"];
+				$word_vote_result = $con->query($word_vote_sql);
+				$upvote_pressed_or_unpressed = "unpressed_vote";
+				$downvote_pressed_or_unpressed = "unpressed_vote";
+				if ($word_vote_result->num_rows == 1) {
+					$word_vote_value = $word_vote_result->fetch_assoc()["vertiba"];
+					if ($word_vote_value == "+") {
+						$upvote_pressed_or_unpressed = "pressed_vote";
+					}
+					elseif ($word_vote_value == "-") {
+						$downvote_pressed_or_unpressed = "pressed_vote";
+					}
+				}
+				
+				// Find the total number of upvotes and downvotes of the current word
+				
+				$upvote_count_sql = "SELECT COUNT(lietotajaID) FROM varduBalsis WHERE vardaID=".$row3["vardaID"]." AND vertiba='+'";
+				$upvote_count_result = $con->query($upvote_count_sql)->fetch_assoc()["COUNT(lietotajaID)"];
+				$downvote_count_sql = "SELECT COUNT(lietotajaID) FROM varduBalsis WHERE vardaID=".$row3["vardaID"]." AND vertiba='-'";
+				$downvote_count_result = $con->query($downvote_count_sql)->fetch_assoc()["COUNT(lietotajaID)"];
+				
 #				echo $row2["definicija"];
 				$word_upvote_form_id = "upvote_btn_".$row3["vardaID"];
 				$word_downvote_form_id = "downvote_btn_".$row3["vardaID"];
+				$word_upvote_count_id = "upvote_count_".$row3["vardaID"];
+				$word_downvote_count_id = "downvote_count_".$row3["vardaID"];
 				$word_upvote_form = "<form method='get' action='wordVote.php' name='upvoteWord' target='dummy_iframe' style='display: inline'>
 					<input type='hidden' name='vards' value='".$row3["vardaID"]."'>
 					<input type='hidden' name='vertiba' value='+'>
-					<input name='patik' value='👍' type='submit' onclick='upvotePressed(\"$word_upvote_form_id\", \"$word_downvote_form_id\")' class='vote_btn upvote_btn $word_upvote_form_id unpressed_vote'>
+					<input name='patik' value='👍' type='submit' onclick='upvotePressed(".$row3["vardaID"].")' class='vote_btn upvote_btn $word_upvote_form_id $upvote_pressed_or_unpressed'>
 				</form>";
 				$word_downvote_form = "<form method='get' action='wordVote.php' name='upvoteWord' target='dummy_iframe' style='display: inline'>
 					<input type='hidden' name='vards' value='".$row3["vardaID"]."'>
 					<input type='hidden' name='vertiba' value='-'>
-					<input name='nepatik' value='👎' type='submit' onclick='downvotePressed(\"$word_upvote_form_id\", \"$word_downvote_form_id\")' class='vote_btn downvote_btn $word_downvote_form_id unpressed_vote'>
+					<input name='nepatik' value='👎' type='submit' onclick='downvotePressed(".$row3["vardaID"].")' class='vote_btn downvote_btn $word_downvote_form_id $downvote_pressed_or_unpressed'>
 				</form>";
-				echo "<tr> <td style='width:400px'>" . $row["vards"] . " " . $word_upvote_form . $word_downvote_form . "</td> <td style='width:700px'>" . $row2["definicija"] . "</td> <td style='width:570px'>";
+				echo "<tr>\n<td style='width:400px'>" . $row["vards"] . " <br> <div class='vote_container'> " . $word_upvote_form . "<span class='$word_upvote_count_id'>$upvote_count_result</span>" . "&nbsp" . $word_downvote_form . "<span class='$word_downvote_count_id'>$downvote_count_result</span>" . " </div> </td> <td style='width:700px'>" . $row2["definicija"] . "</td> <td style='width:570px'>";
 			
 				$sql1 = "SELECT lietotajvards FROM lietotaji WHERE lietotajaID = " . $row["lietotajaID"] . " limit 1";
 				$result1 = $con->query($sql1);
@@ -127,7 +173,7 @@
 				$result4 = $con->query($sql4);
 				$row4 = $result4->fetch_assoc();
 				
-				echo $row1["lietotajvards"] . ", " . $row4["lietotajvards"] . "</td> </tr>";
+				echo $row1["lietotajvards"] . ", " . $row4["lietotajvards"] . "</td>\n</tr>";
 			}
 		}
 		echo "</table>";

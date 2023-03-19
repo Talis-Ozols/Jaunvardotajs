@@ -56,17 +56,15 @@ th {
   outline: 5px auto -webkit-focus-ring-color;
 }
 .unpressed_vote {
-  /* color: gray; */
   text-shadow: 0 0 #333;
-  /* background-color: gray; */
 }
 .pressed_vote.upvote_btn {
-  /* color: purple; */
   text-shadow: 0 0 blue;
-  /* background-color: purple; */
 }
 .pressed_vote.downvote_btn {
-  /* color: purple; */
   text-shadow: 0 0 orange;
-  /* background-color: purple; */
+}
+.vote_container {
+  font-size: 20px;
+  color: #aaf;
 }
