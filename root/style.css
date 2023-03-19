@@ -59,7 +59,7 @@ th {
   text-shadow: 0 0 #333;
 }
 .pressed_vote.upvote_btn {
-  text-shadow: 0 0 blue;
+  text-shadow: 0 0 white;
 }
 .pressed_vote.downvote_btn {
   text-shadow: 0 0 orange;
