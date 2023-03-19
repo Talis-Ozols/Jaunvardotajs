@@ -33,9 +33,14 @@
 	endif; ?>
 	<form action="addDefAction.php" method="post" name="wordEditForm">Ierakstiet v&#257;rdu<span style="font-weight: bold;"><br>
   <input maxlength="50" size="40" name="vards"
-	<?php if (isset($_GET['generetais_vards'])):
-  	echo "value=".$_GET['generetais_vards'];
-  endif; ?>
+	<?php
+		if (isset($_GET['generetais_vards'])) {
+  		echo "value=".$_GET['generetais_vards'];
+		}
+		elseif (isset($_GET['definejamais_vards'])) {
+			echo "value=".$_GET['definejamais_vards'];
+		}
+	?>
 	required><br>
   <br>
   </span>Ierakstiet savu defin&#299;ciju<br>
