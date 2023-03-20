@@ -64,6 +64,12 @@ th {
 .pressed_vote.downvote_btn {
   text-shadow: 0 0 orange;
 }
+.delete_btn {
+  text-shadow: 0 0 #333;
+}
+.delete_btn:hover {
+  text-shadow: 0 0 darkred;
+}
 .vote_container {
   font-size: 20px;
   color: #aaf;

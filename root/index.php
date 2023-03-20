@@ -234,6 +234,7 @@
 				
 				$word_upvote_btn_class = "word_upvote_btn_".$row3["vardaID"];
 				$word_downvote_btn_class = "word_downvote_btn_".$row3["vardaID"];
+				$word_delete_btn_class = "word_delete_btn_".$row3["vardaID"];
 				$word_upvote_count_class = "word_upvote_count_".$row3["vardaID"];
 				$word_downvote_count_class = "word_downvote_count_".$row3["vardaID"];
 				$word_upvote_form = "<form method='get' action='wordVote.php' name='upvoteWord' target='dummy_iframe' style='display: inline'>
@@ -246,7 +247,14 @@
 				<input type='hidden' name='vertiba' value='-'>
 				<input name='nepatik' value='👎' type='submit' onclick='wordDownvotePressed(".$row3["vardaID"].")' class='vote_btn downvote_btn $word_downvote_btn_class $word_downvote_pressed_or_unpressed_class'>
 				</form>";
-				$word_vote_container = "<div class='vote_container'> " . $word_upvote_form . "<span class='$word_upvote_count_class'>$word_upvote_count_result</span>" . "&nbsp" . $word_downvote_form . "<span class='$word_downvote_count_class'>$word_downvote_count_result</span>" . " </div>";
+				$word_delete_form = "";
+				if ($row['lietotajaID'] == $_SESSION['id']) {
+					$word_delete_form = "<form method='get' action='deleteWord.php' name='deleteWord' style='display: inline'>
+						<input type='hidden' name='vards' value='".$row3["vardaID"]."'>
+						<input name='dzest' value='🗑️' type='submit' class='vote_btn delete_btn $word_delete_btn_class'>
+					</form>";
+				}
+				$word_vote_container = "<div class='vote_container'> " . $word_upvote_form . "<span class='$word_upvote_count_class'>$word_upvote_count_result</span>" . "&nbsp" . $word_downvote_form . "<span class='$word_downvote_count_class'>$word_downvote_count_result</span>" . $word_delete_form . " </div>";
 				
 				// Find the total number of upvotes and downvotes of the current definition
 				$definition_upvote_count_sql = "SELECT COUNT(lietotajaID) FROM definicijuBalsis WHERE definicijasID=".$row2["definicijasID"]." AND vertiba='+'";
@@ -256,6 +264,7 @@
 				
 				$definition_upvote_btn_class = "definition_upvote_btn_".$row2["definicijasID"];
 				$definition_downvote_btn_class = "definition_downvote_btn_".$row2["definicijasID"];
+				$definition_delete_btn_class = "definition_delete_btn_".$row2["definicijasID"];
 				$definition_upvote_count_class = "definition_upvote_count_".$row2["definicijasID"];
 				$definition_downvote_count_class = "definition_downvote_count_".$row2["definicijasID"];
 				$definition_upvote_form = "<form method='get' action='definitionVote.php' name='upvoteDefinition' target='dummy_iframe' style='display: inline'>
@@ -268,7 +277,14 @@
 					<input type='hidden' name='vertiba' value='-'>
 					<input name='nepatik' value='👎' type='submit' onclick='definitionDownvotePressed(".$row2["definicijasID"].")' class='vote_btn downvote_btn $definition_downvote_btn_class $definition_downvote_pressed_or_unpressed_class'>
 				</form>";
-				$definition_vote_container = "<div class='vote_container'> " . $definition_upvote_form . "<span class='$definition_upvote_count_class'>$definition_upvote_count_result</span>" . "&nbsp" . $definition_downvote_form . "<span class='$definition_downvote_count_class'>$definition_downvote_count_result</span>" . " </div>";
+				$definition_delete_form = "";
+				if ($row2['lietotajaID'] == $_SESSION['id']) {
+					$definition_delete_form = "<form method='get' action='deleteDefinition.php' name='deleteDefinition' style='display: inline'>
+					<input type='hidden' name='definicija' value='".$row2["definicijasID"]."'>
+					<input name='dzest' value='🗑️' type='submit' class='vote_btn delete_btn $word_delete_btn_class'>
+					</form>";
+				}
+				$definition_vote_container = "<div class='vote_container'> " . $definition_upvote_form . "<span class='$definition_upvote_count_class'>$definition_upvote_count_result</span>" . "&nbsp" . $definition_downvote_form . "<span class='$definition_downvote_count_class'>$definition_downvote_count_result</span>" . $definition_delete_form . " </div>";
 				
 				echo "<tr>\n
 				<td style='width:20vw'>

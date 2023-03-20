@@ -18,9 +18,7 @@
 	{
 		exit('Kļūda cenšoties pieslēgties MySQL: ' . mysqli_connect_error());
 	}
-	
-	var_dump($_GET['pievienojamais_vards']);
-	
+		
 	$sql = "INSERT INTO vardi (`vards`, `generesanasLaiks`, `generatoraIevaddati`, `lietotajaID`, `generatoraID`) VALUES ('".$_GET['pievienojamais_vards']."', NOW(), '', ".$_SESSION['id'].", 1)";
 	if (mysqli_query($con, $sql)) {
 	  echo "New record created successfully";
