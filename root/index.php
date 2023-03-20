@@ -271,16 +271,16 @@
 				$definition_vote_container = "<div class='vote_container'> " . $definition_upvote_form . "<span class='$definition_upvote_count_class'>$definition_upvote_count_result</span>" . "&nbsp" . $definition_downvote_form . "<span class='$definition_downvote_count_class'>$definition_downvote_count_result</span>" . " </div>";
 				
 				echo "<tr>\n
-				<td style='width:400px'>
+				<td style='width:20vw'>
 					<form method='get' action='addDef.php' name='addWord' style='display:inline;'>
 						<input name='definejamais_vards' value='".$row["vards"]."' type='submit' class='unstyled_submit_button'>
 					</form> <br>" .
 					$word_vote_container .
 				"</td>
-				<td style='width:700px'>" .
+				<td style='width:40vw'>" .
 					$row2["definicija"] . "<br>" .
 					$definition_vote_container .
-				"</td> <td style='width:570px'>";
+				"</td> <td style='width:40vw'>";
 			
 				$sql1 = "SELECT lietotajvards FROM lietotaji WHERE lietotajaID = " . $row["lietotajaID"] . " limit 1";
 				$result1 = $con->query($sql1);
