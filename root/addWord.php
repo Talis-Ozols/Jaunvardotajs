@@ -21,7 +21,7 @@
 <html><head>
   
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>addWord</title>
+  <title>Jaunvārdotājs | Pievienot vārdu</title>
 
 <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="style.css">
 

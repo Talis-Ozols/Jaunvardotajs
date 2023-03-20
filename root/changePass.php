@@ -13,7 +13,7 @@
 <html><head>
   
   <meta content="text/html; charset=utf8" http-equiv="content-type">
-  <title>changePass</title>
+  <title>Jaunvārdotājs | Mainīt paroli</title>
 
   
   <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="style.css">

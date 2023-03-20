@@ -2,7 +2,7 @@
 <html><head>
   
   <meta content="text/html; charset=utf8" http-equiv="content-type">
-  <title>loginForm</title>
+  <title>Jaunvārdotājs | Pierakstīties</title>
 
   
   <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="style.css">

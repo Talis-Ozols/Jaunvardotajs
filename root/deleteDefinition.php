@@ -32,7 +32,7 @@
 <html><head>
   
   <meta content="text/html; charset=utf8" http-equiv="content-type">
-  <title>Dzēst vārdu</title>
+  <title>Jaunvārdotājs | Dzēst definīciju</title>
 	
 <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="style.css">
 

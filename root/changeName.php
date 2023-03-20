@@ -13,7 +13,7 @@
 <html><head>
 
   
-  <meta content="text/html; charset=utf8" http-equiv="content-type"><title>changeName</title>
+  <meta content="text/html; charset=utf8" http-equiv="content-type"><title>Jaunvārdotājs | Mainīt lietotājvārdu</title>
   
 
   <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="style.css">
