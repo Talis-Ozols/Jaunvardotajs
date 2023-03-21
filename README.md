@@ -3,7 +3,7 @@
 
 Python instalēšana(NEPIECIEŠAMS!):
 1. Atveriet cmd ievadot "cmd" windows meklēšanas logā
-2. [TĀLIS YOU HERE]
+2. `install python`
 
 Lietotāja pamācība:
 1. Pēc mapes zip instalēšanas, un-zip-ojiet to;
