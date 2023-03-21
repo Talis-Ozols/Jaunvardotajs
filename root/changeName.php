@@ -1,7 +1,7 @@
 <meta charset=utf8>
 
 <?php
-	session_start();
+	session_start(); //Pārbauda vai sesija eksistē
 	if (!isset($_SESSION['loggedin']))
 	{
 		header("Location: loginForm.php");

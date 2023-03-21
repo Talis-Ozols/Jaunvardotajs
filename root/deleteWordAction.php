@@ -1,13 +1,14 @@
 <meta charset=utf8>
 
 <?php
-	session_start();
+	session_start(); //Pārbauda vai sesija eksistē
 	if (!isset($_SESSION['loggedin']))
 	{
 		header("Location: loginForm.php");
 		exit;
 	}
 	
+	//Pieslēgšanās datu bāzei
 	$DATABASE_HOST = 'localhost';
 	$DATABASE_USER = 'root';
 	$DATABASE_PASS = 'usbw';
@@ -19,13 +20,15 @@
 		exit('Kļūda cenšoties pieslēgties MySQL: ' . mysqli_connect_error());
 	}
 	
+	//Atrod un izdzēš izvēlēto vārdu
 	$count_sql = "SELECT vardaID FROM vardi WHERE vardaID = ".$_GET['vards']." AND lietotajaID = ".$_SESSION['id'];
 	$count_result = $con->query($count_sql);
-	if ($count_result->num_rows == 0) {
-	  echo "Nav vārda, ko dzēst";
+	if ($count_result->num_rows == 0) //Nav vārda, ko dzēst
+	{
 		header("Location: deleteWord.php?error=nav_varda_vai_lietotaja");
 	}
-	else {
+	else //atrod un arī izdzēš visas ar vārdu saistītās definīcijas un balsis
+	{
 		$definition_vote_delete_sql = "DELETE FROM definicijuBalsis WHERE definicijasID IN (SELECT definicijas.definicijasID FROM definicijas WHERE definicijas.definicijasID = definicijuBalsis.definicijasID AND definicijas.vardaID = ".$_GET['vards'].")";
 		$con->query($definition_vote_delete_sql);
 		$word_vote_delete_sql = "DELETE FROM varduBalsis WHERE vardaID = ".$_GET['vards'];

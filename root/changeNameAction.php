@@ -1,26 +1,27 @@
 <meta charset=utf8>
 
 <?php
-	session_start();
+	session_start(); //Pārbauda vai sesija eksistē
 	if (!isset($_SESSION['loggedin']))
 	{
 		header("Location: loginForm.php");
 		exit;
 	}
 	
+	//Šis kods noņem visu lieko no ievades, lai, piemēram, nevarētu ievades vietās rakstīt html kodu
 	$_POST['lietotajvards']=trim($_POST['lietotajvards']);
 	
 	$_POST['lietotajvards']=strip_tags($_POST['lietotajvards']);
 	
 	$_POST['lietotajvards']=htmlentities($_POST['lietotajvards']);
 
-
 	$kluda="";
 	if(!$_POST['lietotajvards']){$kluda.="Pietrūkst informācijas!<br>";}
 	
+	
     if(!$kluda)
     {
-		
+		//Pieslēgšanās datu bāzei
 		$DATABASE_HOST = 'localhost';
 		$DATABASE_USER = 'root';
 		$DATABASE_PASS = 'usbw';
@@ -31,7 +32,7 @@
 			exit('Kļūda cenšoties pielēgties MySQL: ' . mysqli_connect_error());
 		}
 		
-		
+		//izmaina lietotājvārdu
 		$stmt = $con->prepare("UPDATE lietotaji SET lietotajvards = " . "'" . $_POST['lietotajvards'] . "'" . " WHERE lietotajaID = ?");
 		$stmt->bind_param('i', $_SESSION['id']);
 		$stmt->execute();

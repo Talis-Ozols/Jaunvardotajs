@@ -1,6 +1,6 @@
 <meta charset=utf8>
 
-<?php
+<?php //Atslēdz lietotāju
 	session_start();
 	session_destroy();
 ?>

@@ -1,13 +1,14 @@
 <meta charset=utf8>
 
 <?php
-	session_start();
+	session_start(); //Pārbauda vai sesija eksistē
 	if (!isset($_SESSION['loggedin']))
 	{
 		header("Location: loginForm.php");
 		exit;
 	}
 	
+	//Pieslēgšanās datu bāzei
 	$DATABASE_HOST = 'localhost';
 	$DATABASE_USER = 'root';
 	$DATABASE_PASS = 'usbw';
@@ -41,8 +42,9 @@
 		if (isset($_GET['vards'])) {
 			$varda_sql = "SELECT vards FROM vardi WHERE vardaID=".$_GET['vards'];
 			$vards = $con->query($varda_sql)->fetch_assoc()['vards'];
-			// $definiciju_sql = "SELECT definicija FROM definicijas WHERE vardaID=".$_GET['vards'];
-			// $definicijas = $con->query($definiciju_sql);
+			#$definiciju_sql = "SELECT definicija FROM definicijas WHERE vardaID=".$_GET['vards'];
+			#$definicijas = $con->query($definiciju_sql);
+			//Confirmation
 			echo "<p>Vai esat pārliecināts, ka vēlaties dzēst vārdu <b>\"$vards\"</b> un visas tā definīcijas?</p>";
 			echo "<form action='deleteWordAction.php' method='get' name='wordDeleteForm'>
 				<input type='hidden' name='vards' value='".$_GET['vards']."'>
@@ -50,14 +52,17 @@
 			</form><br>";
 		}
 		elseif (isset($_GET['error'])) {
-			if ($_GET['error'] == "nav_varda_vai_lietotaja") {
+			if ($_GET['error'] == "nav_varda_vai_lietotaja")
+			{
 				echo "<p>Vārdu neizdevās izdzēst, jo tas neeksistē vai arī Jūs neesat tā radītājs</p>";
 			}
-			else {
+			else
+			{
 				echo "<p>Vārdu neizdevās dzēst</p>";
 			}
 		}
-		elseif (isset($_GET['veiksmigi'])) {
+		elseif (isset($_GET['veiksmigi']))
+		{
 			echo "<p>Vārds izdzēsts veiksmīgi!</p>";
 		}
 	?>

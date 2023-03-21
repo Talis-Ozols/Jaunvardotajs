@@ -1,13 +1,14 @@
 <meta charset=utf8>
 
 <?php
-	session_start();
+	session_start(); //Pārbauda vai sesija eksistē
 	if (!isset($_SESSION['loggedin']))
 	{
 		header("Location: loginForm.php");
 		exit;
 	}
 	
+	//Pieslēgšanās datu bāzei
 	$DATABASE_HOST = 'localhost';
 	$DATABASE_USER = 'root';
 	$DATABASE_PASS = 'usbw';
@@ -38,7 +39,8 @@
 
 </head><body>
 	<?php
-		if (isset($_GET['definicija'])) {
+		if (isset($_GET['definicija']))
+		{
 			$definicijas_sql = "SELECT definicija FROM definicijas WHERE definicijasID=".$_GET['definicija'];
 			$definicija = $con->query($definicijas_sql)->fetch_assoc()['definicija'];
 			echo "<p>Vai esat pārliecināts, ka vēlaties dzēst definīciju <b>\"$definicija\"</b>?</p>";
@@ -47,15 +49,19 @@
 				<input value='Dzēst' type='submit' class='unstyled_submit_button'>
 			</form><br>";
 		}
-		elseif (isset($_GET['error'])) {
-			if ($_GET['error'] == "nav_definicijas_vai_lietotaja") {
+		elseif (isset($_GET['error']))
+		{
+			if ($_GET['error'] == "nav_definicijas_vai_lietotaja")
+			{
 				echo "<p>Definīciju neizdevās izdzēst, jo tā neeksistē vai arī Jūs neesat tās radītājs</p>";
 			}
-			else {
+			else
+			{
 				echo "<p>Definīciju neizdevās dzēst</p>";
 			}
 		}
-		elseif (isset($_GET['veiksmigi'])) {
+		elseif (isset($_GET['veiksmigi']))
+		{
 			echo "<p>Definīcija izdzēsta veiksmīgi!</p>";
 		}
 	?>

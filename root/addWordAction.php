@@ -1,13 +1,14 @@
 <meta charset=utf8>
 
 <?php
-	session_start();
+	session_start(); //Pārbauda vai sesija eksistē
 	if (!isset($_SESSION['loggedin']))
 	{
 		header("Location: loginForm.php");
 		exit;
 	}
 	
+	//Pieslēgšanās datu bāzei
 	$DATABASE_HOST = 'localhost';
 	$DATABASE_USER = 'root';
 	$DATABASE_PASS = 'usbw';
@@ -37,7 +38,7 @@
 	if ($result->num_rows > 0)
 	{
 		$row = $result->fetch_assoc();
-#		echo $row["vardaID"];
+		#echo $row["vardaID"];
 
 		$link = mysql_connect("localhost", "root", "usbw");
 		mysql_select_db("vardudb", $link);

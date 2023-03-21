@@ -1,13 +1,14 @@
 <meta charset=utf8>
 
 <?php
-	session_start();
+	session_start(); //Pārbauda vai sesija eksistē
 	if (!isset($_SESSION['loggedin']))
 	{
 		header("Location: loginForm.php");
 		exit;
 	}
 	
+	//Šis kods noņem visu lieko no ievades, lai, piemēram, nevarētu ievades vietās rakstīt html kodu
 	$_POST['vards']=trim($_POST['vards']);
 	$_POST['definicija']=trim($_POST['definicija']);
 	
@@ -17,14 +18,14 @@
 	$_POST['vards']=htmlentities($_POST['vards']);
 	$_POST['definicija']=htmlentities($_POST['definicija']);
 
-
 	$kluda="";
 	if(!$_POST['vards']){$kluda.="Pietrūkst informācijas!<br>";}
 	if(!$_POST['definicija']){$kluda.="Pietrūkst informācijas!<br>";}
 	
+	
     if(!$kluda)
     {
-	
+		//Pieslēgšanās datu bāzei
 		$DATABASE_HOST = 'localhost';
 		$DATABASE_USER = 'root';
 		$DATABASE_PASS = 'usbw';
