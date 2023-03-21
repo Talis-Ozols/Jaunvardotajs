@@ -1,21 +1,26 @@
 <meta charset=utf8>
 
 <?php
-	session_start();
+	session_start(); //Pārbauda vai sesija eksistē
 	if (!isset($_SESSION['loggedin']))
 	{
 		header("Location: loginForm.php");
 		exit;
 	}
+	
+	//Pieslēgšanās datu bāzei
 	$DATABASE_HOST = 'localhost';
 	$DATABASE_USER = 'root';
 	$DATABASE_PASS = 'usbw';
 	$DATABASE_NAME = 'vardudb';
+	
 	$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 	if ( mysqli_connect_errno() )
 	{
 		exit('Kļūda cenšoties pielēgties MySQL: ' . mysqli_connect_error());
 	}
+	
+	//Paņem epasta adresi no datu bāzes
 	$stmt = $con->prepare('SELECT epastaAdrese FROM lietotaji WHERE lietotajaID = ?');
 	$stmt->bind_param('i', $_SESSION['id']);
 	$stmt->execute();
