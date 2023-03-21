@@ -4,21 +4,17 @@
 	session_start();
 	$_POST['lietotajvards']=trim($_POST['lietotajvards']);
 	$_POST['epastaAdrese']=trim($_POST['epastaAdrese']);
-	$_POST['sifretaParole']=trim($_POST['sifretaParole']);
 	
 	$_POST['lietotajvards']=strip_tags($_POST['lietotajvards']);
 	$_POST['epastaAdrese']=strip_tags($_POST['epastaAdrese']);
-	$_POST['sifretaParole']=strip_tags($_POST['sifretaParole']);
 	
 	$_POST['lietotajvards']=htmlentities($_POST['lietotajvards']);
 	$_POST['epastaAdrese']=htmlentities($_POST['epastaAdrese']);
-	$_POST['sifretaParole']=htmlentities($_POST['sifretaParole']);
 
 
 	$kluda="";
 	if(!$_POST['lietotajvards']){$kluda.="Pietrūkst informācijas!<br>";}
 	if(!$_POST['epastaAdrese']){$kluda.="Pietrūkst informācijas!<br>";}
-	if(!$_POST['sifretaParole']){$kluda.="Pietrūkst informācijas!<br>";}
 	
     if(!$kluda)
     {

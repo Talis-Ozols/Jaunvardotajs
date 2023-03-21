@@ -7,6 +7,7 @@
 		header("Location: loginForm.php");
 		exit;
 	}
+	
 	$DATABASE_HOST = 'localhost';
 	$DATABASE_USER = 'root';
 	$DATABASE_PASS = 'usbw';
@@ -22,7 +23,6 @@
 	{
 		$safePass = md5($safePass);
 	}
-	
 	
 	$stmt = $con->prepare("UPDATE lietotaji SET sifretaParole = " . "'" . $safePass . "'" . " WHERE lietotajaID = ?");
 	$stmt->bind_param('i', $_SESSION['id']);
