@@ -1,7 +1,7 @@
 # Jaunvardotajs
  Tīmekļvietne, kurā radīt jaunus latviešu valodas vārdus
 
-Python instalēšana:
+Python instalēšana(NEPIECIEŠAMS!):
 1. Atveriet cmd ievadot "cmd" windows meklēšanas logā
 2. [TĀLIS YOU HERE]
 
