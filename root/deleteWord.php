@@ -27,7 +27,7 @@
 	echo "<h1>Jaunvārdotājs</h1><br><br>";
 ?>
 
-<!DOCTYPE html PUBLIC>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 	<head>
 		<meta content="text/html; charset=utf8" http-equiv="content-type">
