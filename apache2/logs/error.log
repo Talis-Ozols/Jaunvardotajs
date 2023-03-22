@@ -1,17 +1,5 @@
-[Tue Mar 21 11:06:19.634731 2023] [mpm_winnt:notice] [pid 1528:tid 768] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Tue Mar 21 11:06:19.636023 2023] [mpm_winnt:notice] [pid 1528:tid 768] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Tue Mar 21 11:06:19.636023 2023] [core:notice] [pid 1528:tid 768] AH00094: Command line: 'C:\\Users\\TEMP.IZV\\Documents\\GitHub\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/TEMP.IZV/Documents/GitHub/Jaunvardotajs/apache2'
-[Tue Mar 21 11:06:19.653268 2023] [mpm_winnt:notice] [pid 1528:tid 768] AH00418: Parent: Created child process 11524
-[Tue Mar 21 11:06:20.291596 2023] [mpm_winnt:notice] [pid 11524:tid 828] AH00354: Child: Starting 64 worker threads.
-Traceback (most recent call last):
-  File "C:\Users\TEMP.IZV\Documents\GitHub\Jaunvardotajs\root\generator\burtu_virknu_salicejs.py", line 26, in <module>
-    import numpy as np
-ModuleNotFoundError: No module named 'numpy'
-[Tue Mar 21 11:10:28.959710 2023] [:error] [pid 11524:tid 1348] [client ::1:56718] PHP Notice:  Trying to get property of non-object in C:\\Users\\TEMP.IZV\\Documents\\GitHub\\Jaunvardotajs\\root\\generator\\generateWords.php on line 10, referer: http://localhost:8080/index.php
-[Tue Mar 21 11:10:28.960913 2023] [:error] [pid 11524:tid 1348] [client ::1:56718] PHP Warning:  Invalid argument supplied for foreach() in C:\\Users\\TEMP.IZV\\Documents\\GitHub\\Jaunvardotajs\\root\\addWord.php on line 50, referer: http://localhost:8080/index.php
-Traceback (most recent call last):
-  File "C:\Users\TEMP.IZV\Documents\GitHub\Jaunvardotajs\root\generator\burtu_virknu_salicejs.py", line 27, in <module>
-    import matplotlib.pyplot as plt
-ModuleNotFoundError: No module named 'matplotlib'
-[Tue Mar 21 11:19:14.786856 2023] [:error] [pid 11524:tid 1348] [client ::1:56792] PHP Notice:  Trying to get property of non-object in C:\\Users\\TEMP.IZV\\Documents\\GitHub\\Jaunvardotajs\\root\\generator\\generateWords.php on line 10, referer: http://localhost:8080/index.php
-[Tue Mar 21 11:19:14.786856 2023] [:error] [pid 11524:tid 1348] [client ::1:56792] PHP Warning:  Invalid argument supplied for foreach() in C:\\Users\\TEMP.IZV\\Documents\\GitHub\\Jaunvardotajs\\root\\addWord.php on line 50, referer: http://localhost:8080/index.php
+[Wed Mar 22 08:36:27.041244 2023] [mpm_winnt:notice] [pid 14980:tid 768] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Wed Mar 22 08:36:27.044278 2023] [mpm_winnt:notice] [pid 14980:tid 768] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Wed Mar 22 08:36:27.044278 2023] [core:notice] [pid 14980:tid 768] AH00094: Command line: 'C:\\Users\\TEMP.IZV\\Documents\\GitHub\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/TEMP.IZV/Documents/GitHub/Jaunvardotajs/apache2'
+[Wed Mar 22 08:36:27.057789 2023] [mpm_winnt:notice] [pid 14980:tid 768] AH00418: Parent: Created child process 7016
+[Wed Mar 22 08:36:27.835826 2023] [mpm_winnt:notice] [pid 7016:tid 788] AH00354: Child: Starting 64 worker threads.

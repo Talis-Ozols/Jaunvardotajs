@@ -1,7 +1,7 @@
 <meta charset=utf8>
 
 <?php
-	session_start();
+	session_start(); //Pārbauda vai sesija eksistē
 	if (!isset($_SESSION['loggedin']))
 	{
 		header("Location: loginForm.php");
@@ -9,7 +9,7 @@
 	}
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC>
 <html><head><meta content="text/html; charset=utf8" http-equiv="content-type"><title>Jaunvārdotājs</title>
 
 <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="style.css">
@@ -154,7 +154,7 @@
 	}
 </script>
 <?php
-
+	//Pieslēgšanās datu bāzei
 	$DATABASE_HOST = 'localhost';
 	$DATABASE_USER = 'root';
 	$DATABASE_PASS = 'usbw';
