@@ -10,4 +10,4 @@
  2. Izpildiet _usbwebserver.exe_ un dodiet tam atļaujas piekļūt jūsu internetam;
  3. Nospiediet "Localhost" un ļaujieties jaunvārdu ģenerēšanas maģijai! Varat atsaukties arī uz lietotāja ceļvedi programmas dokumentācijā.
 
-   Ja rodas problēmas, spiediet uz šo saiti padziļinātam lietotāja ceļvedim - https://www.usbwebserver.net/downloads/manual.pdf
+   Ja rodas problēmas ar USBWebserver, spiediet uz šo saiti padziļinātam USBWebserver lietotāja ceļvedim - https://www.usbwebserver.net/downloads/manual.pdf
