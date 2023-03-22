@@ -15,7 +15,7 @@
 	<br>
 	<form action="noDBloginForm.php" method="post" name="loginForm">
 		E-pasta adrese<br>
-		<input size="40" maxlength="255" name="epastaAdrese" required><br>
+		<input type="email" size="40" maxlength="255" name="epastaAdrese" required><br>
 		<br>
 		Parole<br>
 		<input minlength="8" size="40" maxlength="64" name="sifretaParole" type="password" required><br>

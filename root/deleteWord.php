@@ -57,4 +57,6 @@
 				echo "<p>Vārds izdzēsts veiksmīgi!</p>";
 			}
 		?>
-		<a id='spiedSeit' href
+		<a id='spiedSeit' href='index.php'>Atpakaļ</a>
+	</body>
+</html>

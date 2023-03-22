@@ -1,5 +1,7 @@
-[Wed Mar 22 09:09:47.753020 2023] [mpm_winnt:notice] [pid 18252:tid 676] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Wed Mar 22 09:09:47.753020 2023] [mpm_winnt:notice] [pid 18252:tid 676] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Wed Mar 22 09:09:47.753020 2023] [core:notice] [pid 18252:tid 676] AH00094: Command line: 'C:\\Users\\istsc\\Desktop\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/istsc/Desktop/Jaunvardotajs/apache2'
-[Wed Mar 22 09:09:47.758021 2023] [mpm_winnt:notice] [pid 18252:tid 676] AH00418: Parent: Created child process 17356
-[Wed Mar 22 09:09:48.590931 2023] [mpm_winnt:notice] [pid 17356:tid 828] AH00354: Child: Starting 64 worker threads.
+[Wed Mar 22 09:25:34.364277 2023] [mpm_winnt:notice] [pid 548:tid 600] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Wed Mar 22 09:25:34.364277 2023] [mpm_winnt:notice] [pid 548:tid 600] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Wed Mar 22 09:25:34.364277 2023] [core:notice] [pid 548:tid 600] AH00094: Command line: 'C:\\Users\\istsc\\Desktop\\Jaunvardotajs/apache2/bin/httpd_usbwv8.exe -d C:/Users/istsc/Desktop/Jaunvardotajs/apache2'
+[Wed Mar 22 09:25:34.369277 2023] [mpm_winnt:notice] [pid 548:tid 600] AH00418: Parent: Created child process 4548
+[Wed Mar 22 09:25:35.384979 2023] [mpm_winnt:notice] [pid 4548:tid 784] AH00354: Child: Starting 64 worker threads.
+[Wed Mar 22 09:35:22.310122 2023] [:error] [pid 4548:tid 1288] [client ::1:61652] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in C:\\Users\\istsc\\Desktop\\Jaunvardotajs\\root\\index.php on line 197, referer: http://localhost:8080/addDef.php
+[Wed Mar 22 09:35:22.979514 2023] [:error] [pid 4548:tid 1288] [client ::1:61652] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in C:\\Users\\istsc\\Desktop\\Jaunvardotajs\\root\\index.php on line 197, referer: http://localhost:8080/addDef.php
