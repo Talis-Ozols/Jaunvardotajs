@@ -582,3 +582,196 @@ Version: '5.6.13'  socket: ''  port: 3307  MySQL Community Server (GPL)
 2023-03-20 12:25:46 2788 [Note] IPv6 is available.
 2023-03-20 12:25:46 2788 [Note]   - '::' resolves to '::';
 2023-03-20 12:25:46 2788 [Note] Server socket created on IP: '::'.
+2023-03-22 09:07:27 4892 [Note] Plugin 'FEDERATED' is disabled.
+2023-03-22 09:07:27 4892 [Note] InnoDB: The InnoDB memory heap is disabled
+2023-03-22 09:07:27 4892 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-03-22 09:07:27 4892 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2023-03-22 09:07:27 4892 [Note] InnoDB: Not using CPU crc32 instructions
+2023-03-22 09:07:27 4892 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2023-03-22 09:07:27 4892 [Note] InnoDB: Completed initialization of buffer pool
+2023-03-22 09:07:27 4892 [Note] InnoDB: Highest supported file format is Barracuda.
+2023-03-22 09:07:27 4892 [Note] InnoDB: The log sequence numbers 1626134 and 1626134 in ibdata files do not match the log sequence number 2265019 in the ib_logfiles!
+2023-03-22 09:07:27 4892 [Note] InnoDB: Database was not shutdown normally!
+2023-03-22 09:07:27 4892 [Note] InnoDB: Starting crash recovery.
+2023-03-22 09:07:27 4892 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2023-03-22 09:07:27 4892 [Note] InnoDB: Restoring possible half-written data pages 
+2023-03-22 09:07:27 4892 [Note] InnoDB: from the doublewrite buffer...
+2023-03-22 09:07:27 4892 [Note] InnoDB: 128 rollback segment(s) are active.
+2023-03-22 09:07:27 4892 [Note] InnoDB: Waiting for purge to start
+2023-03-22 09:07:27 4060 InnoDB: Error: page 4 log sequence number 2286010
+InnoDB: is in the future! Current system log sequence number 2265029.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:28 4060 InnoDB: Error: page 5 log sequence number 2286037
+InnoDB: is in the future! Current system log sequence number 2265029.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:28 4060 InnoDB: Error: page 3 log sequence number 2285984
+InnoDB: is in the future! Current system log sequence number 2265029.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:28 4060 InnoDB: Error: page 4 log sequence number 2280565
+InnoDB: is in the future! Current system log sequence number 2265029.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:28 4060 InnoDB: Error: page 5 log sequence number 2280597
+InnoDB: is in the future! Current system log sequence number 2265029.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:28 4060 InnoDB: Error: page 3 log sequence number 2280539
+InnoDB: is in the future! Current system log sequence number 2265029.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:28 4892 [Note] InnoDB: 5.6.13 started; log sequence number 2265019
+2023-03-22 09:07:28 4892 [Note] Server hostname (bind-address): '*'; port: 3307
+2023-03-22 09:07:28 4892 [Note] IPv6 is available.
+2023-03-22 09:07:28 4892 [Note]   - '::' resolves to '::';
+2023-03-22 09:07:28 4892 [Note] Server socket created on IP: '::'.
+2023-03-22 09:07:53 17044 [Note] Plugin 'FEDERATED' is disabled.
+2023-03-22 09:07:53 17044 [Note] InnoDB: The InnoDB memory heap is disabled
+2023-03-22 09:07:53 17044 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-03-22 09:07:53 17044 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2023-03-22 09:07:53 17044 [Note] InnoDB: Not using CPU crc32 instructions
+2023-03-22 09:07:53 17044 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2023-03-22 09:07:53 17044 [Note] InnoDB: Completed initialization of buffer pool
+2023-03-22 09:07:53 17044 [Note] InnoDB: Highest supported file format is Barracuda.
+2023-03-22 09:07:53 17044 [Note] InnoDB: The log sequence numbers 1626134 and 1626134 in ibdata files do not match the log sequence number 2265029 in the ib_logfiles!
+2023-03-22 09:07:53 17044 [Note] InnoDB: Database was not shutdown normally!
+2023-03-22 09:07:53 17044 [Note] InnoDB: Starting crash recovery.
+2023-03-22 09:07:53 17044 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2023-03-22 09:07:53 17044 [Note] InnoDB: Restoring possible half-written data pages 
+2023-03-22 09:07:53 17044 [Note] InnoDB: from the doublewrite buffer...
+2023-03-22 09:07:53 17044 [Note] InnoDB: 128 rollback segment(s) are active.
+2023-03-22 09:07:53 17044 [Note] InnoDB: Waiting for purge to start
+2023-03-22 09:07:53 1680 InnoDB: Error: page 4 log sequence number 2286010
+InnoDB: is in the future! Current system log sequence number 2265039.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:53 1680 InnoDB: Error: page 5 log sequence number 2286037
+InnoDB: is in the future! Current system log sequence number 2265039.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:53 1680 InnoDB: Error: page 3 log sequence number 2285984
+InnoDB: is in the future! Current system log sequence number 2265039.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:53 1680 InnoDB: Error: page 4 log sequence number 2280565
+InnoDB: is in the future! Current system log sequence number 2265039.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:53 1680 InnoDB: Error: page 5 log sequence number 2280597
+InnoDB: is in the future! Current system log sequence number 2265039.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:53 1680 InnoDB: Error: page 3 log sequence number 2280539
+InnoDB: is in the future! Current system log sequence number 2265039.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:07:53 17044 [Note] InnoDB: 5.6.13 started; log sequence number 2265029
+2023-03-22 09:07:53 17044 [Note] Server hostname (bind-address): '*'; port: 3307
+2023-03-22 09:07:53 17044 [Note] IPv6 is available.
+2023-03-22 09:07:53 17044 [Note]   - '::' resolves to '::';
+2023-03-22 09:07:53 17044 [Note] Server socket created on IP: '::'.
+2023-03-22 09:08:00 13260 [Note] Plugin 'FEDERATED' is disabled.
+2023-03-22 09:08:00 13260 [Note] InnoDB: The InnoDB memory heap is disabled
+2023-03-22 09:08:00 13260 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-03-22 09:08:00 13260 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2023-03-22 09:08:00 13260 [Note] InnoDB: Not using CPU crc32 instructions
+2023-03-22 09:08:00 13260 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2023-03-22 09:08:00 13260 [Note] InnoDB: Completed initialization of buffer pool
+2023-03-22 09:08:00 13260 [Note] InnoDB: Highest supported file format is Barracuda.
+2023-03-22 09:08:00 13260 [Note] InnoDB: Log scan progressed past the checkpoint lsn 2265029
+2023-03-22 09:08:00 13260 [Note] InnoDB: Database was not shutdown normally!
+2023-03-22 09:08:00 13260 [Note] InnoDB: Starting crash recovery.
+2023-03-22 09:08:00 13260 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2023-03-22 09:08:00 13260 [Note] InnoDB: Restoring possible half-written data pages 
+2023-03-22 09:08:00 13260 [Note] InnoDB: from the doublewrite buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 2265039
+2023-03-22 09:08:00 13260 [Note] InnoDB: 128 rollback segment(s) are active.
+2023-03-22 09:08:00 13260 [Note] InnoDB: Waiting for purge to start
+2023-03-22 09:08:00 8e4 InnoDB: Error: page 4 log sequence number 2286010
+InnoDB: is in the future! Current system log sequence number 2265049.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:08:00 8e4 InnoDB: Error: page 5 log sequence number 2286037
+InnoDB: is in the future! Current system log sequence number 2265049.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:08:00 8e4 InnoDB: Error: page 3 log sequence number 2285984
+InnoDB: is in the future! Current system log sequence number 2265049.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:08:00 8e4 InnoDB: Error: page 4 log sequence number 2280565
+InnoDB: is in the future! Current system log sequence number 2265049.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:08:00 8e4 InnoDB: Error: page 5 log sequence number 2280597
+InnoDB: is in the future! Current system log sequence number 2265049.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:08:00 8e4 InnoDB: Error: page 3 log sequence number 2280539
+InnoDB: is in the future! Current system log sequence number 2265049.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2023-03-22 09:08:00 13260 [Note] InnoDB: 5.6.13 started; log sequence number 2265039
+2023-03-22 09:08:00 13260 [Note] Server hostname (bind-address): '*'; port: 3307
+2023-03-22 09:08:00 13260 [Note] IPv6 is available.
+2023-03-22 09:08:00 13260 [Note]   - '::' resolves to '::';
+2023-03-22 09:08:00 13260 [Note] Server socket created on IP: '::'.
+2023-03-22 09:09:47 3324 [Note] Plugin 'FEDERATED' is disabled.
+2023-03-22 09:09:47 3324 [Note] InnoDB: The InnoDB memory heap is disabled
+2023-03-22 09:09:47 3324 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-03-22 09:09:47 3324 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2023-03-22 09:09:47 3324 [Note] InnoDB: Not using CPU crc32 instructions
+2023-03-22 09:09:47 3324 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2023-03-22 09:09:47 3324 [Note] InnoDB: Completed initialization of buffer pool
+2023-03-22 09:09:47 3324 [Note] InnoDB: Highest supported file format is Barracuda.
+2023-03-22 09:09:47 3324 [Note] InnoDB: The log sequence numbers 1626134 and 1626134 in ibdata files do not match the log sequence number 2265049 in the ib_logfiles!
+2023-03-22 09:09:47 3324 [Note] InnoDB: Database was not shutdown normally!
+2023-03-22 09:09:47 3324 [Note] InnoDB: Starting crash recovery.
+2023-03-22 09:09:47 3324 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2023-03-22 09:09:47 3324 [Note] InnoDB: Restoring possible half-written data pages 
+2023-03-22 09:09:47 3324 [Note] InnoDB: from the doublewrite buffer...
+2023-03-22 09:09:47 3324 [Note] InnoDB: 128 rollback segment(s) are active.
+2023-03-22 09:09:47 3324 [Note] InnoDB: Waiting for purge to start
+2023-03-22 09:09:47 3324 [Note] InnoDB: 5.6.13 started; log sequence number 2265049
+2023-03-22 09:09:47 3324 [Note] Server hostname (bind-address): '*'; port: 3307
+2023-03-22 09:09:47 3324 [Note] IPv6 is available.
+2023-03-22 09:09:47 3324 [Note]   - '::' resolves to '::';
+2023-03-22 09:09:47 3324 [Note] Server socket created on IP: '::'.
